@@ -1,2 +1,0 @@
-# Projekt_OiAK
- 
