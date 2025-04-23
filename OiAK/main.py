@@ -1,10 +1,17 @@
-import odtwarzajace
-import nieodtwarzajace
+import SRT
+import restoring
+import nonrestoring
 
 
 def main():
-    print('odtwarzajace')
+    dividend = 23
+    divisor = 4
+    restoring.division(dividend, divisor)
+    nonrestoring.division(dividend, divisor)
 
 
 if __name__ == '__main__':
     main()
+
+
+
