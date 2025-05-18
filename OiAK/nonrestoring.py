@@ -1,4 +1,7 @@
+import time
+
 def division(dividend, divisor):
+    start = time.perf_counter()
     quotient = 0
     remainder = 0
     bits = dividend.bit_length()
@@ -23,4 +26,10 @@ def division(dividend, divisor):
     if remainder < 0:
         remainder += divisor
 
+    end = time.perf_counter()
+
+    time_performed = end - start
+
     print(f"Non-restoring: Quotient = {quotient}, Remainder = {remainder}")
+    
+    return time_performed
