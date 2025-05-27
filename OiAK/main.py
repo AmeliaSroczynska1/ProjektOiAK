@@ -1,3 +1,4 @@
+import generator_liczb
 import testy
 
 
