@@ -24,5 +24,5 @@ def dzielenie(dzielna, dzielnik):
     if reszta < 0:
         reszta += dzielnik
 
-    print(f"\nDzielenie nieodtwarzające: Iloraz = {iloraz}, Reszta = {reszta}")
+    print(f"Dzielenie nieodtwarzające: Iloraz = {iloraz}, Reszta = {reszta}")
 

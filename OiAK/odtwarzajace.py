@@ -14,4 +14,4 @@ def dzielenie(dzielna, dzielnik):
         else:
             reszta = poprzednia_reszta  # Przywracamy wartość reszty
 
-    print(f"\nDzielenie odtwarzające: Iloraz = {iloraz}, Reszta = {reszta}")
+    print(f"Dzielenie odtwarzające: Iloraz = {iloraz}, Reszta = {reszta}")
