@@ -1,17 +1,61 @@
+def u2_na_wartosc(liczba, bity=32):
+    # Konwersja liczby z U2 na wartość ze znakiem
+    if liczba & (1 << (bity - 1)):
+        return liczba - (1 << bity)
+    else:
+        return liczba
 
-def dzielenie(dzielna, dzielnik):
+def wartosc_na_u2(liczba, bity=32):
+    # Konwersja liczby całkowitej na U2
+    return liczba & ((1 << bity) - 1)
+
+def dzielenie(dzielna, dzielnik, bity=32):
+    # Konwersja argumentów z U2 na wartości całkowite ze znakiem
+    dzielna_int = u2_na_wartosc(dzielna, bity)
+    dzielnik_int = u2_na_wartosc(dzielnik, bity)
+    if dzielnik_int == 0:
+        raise ZeroDivisionError("Dzielenie przez zero!")
+
+    dzielna_abs = abs(dzielna_int)
+    dzielnik_abs = abs(dzielnik_int)
+
     iloraz = 0
     reszta = 0
-    bity = dzielna.bit_length()
+    bity_dzielnej = dzielna_abs.bit_length()
 
-    for i in range(bity - 1, -1, -1):
-        reszta = (reszta << 1) | ((dzielna >> i) & 1)
-        iloraz <<= 1
-        poprzednia_reszta = reszta
-        reszta -= dzielnik
-        if reszta >= 0:
-            iloraz |= 1
+    # Przetwarzanie bitów dzielnej od najwyższego do najniższego
+    for i in range(bity_dzielnej - 1, -1, -1):
+        # 1. Przesunięcie reszty w lewo i pobranie kolejnego bitu dzielnej:
+        #    Reszta zostaje przesunięta o jeden bit w lewo, a do najmłodszego bitu dołączany jest kolejny bit z dzielnej.
+        reszta = (reszta << 1) | ((dzielna_abs >> i) & 1)
+
+        # 2. Próba odjęcia dzielnika od reszty:
+        #    Sprawdzamy, czy reszta po przesunięciu i dodaniu nowego bitu jest większa lub równa dzielnikowi.
+        #    Jeśli tak, odejmowanie będzie możliwe.
+        if reszta >= dzielnik_abs:
+            # 3. Aktualizacja reszty:
+            #    Odejmujemy dzielnik od reszty, bo odejmowanie się udało.
+            reszta -= dzielnik_abs
+            # 4. Zapisanie bitu ilorazu:
+            #    Skoro odejmowanie się udało, zapisujemy 1 na ostatniej pozycji ilorazu.
+            iloraz = (iloraz << 1) | 1
         else:
-            reszta = poprzednia_reszta  # Przywracamy wartość reszty
+            # 3. Aktualizacja reszty:
+            #    Odejmowanie się nie udało, reszta pozostaje bez zmian.
+            # 4. Zapisanie bitu ilorazu:
+            #    Skoro odejmowanie się nie udało, zapisujemy 0 na ostatniej pozycji ilorazu.
+            iloraz = (iloraz << 1) | 0
+        # 5. Powtórzenie procesu dla kolejnego bitu dzielnej:
+        #    Proces powtarza się dla każdego bitu dzielnej.
 
-#    print(f"Dzielenie odtwarzające: Iloraz = {iloraz}, Reszta = {reszta}")
+    # Korekta znaku wyniku
+    if (dzielna_int < 0) != (dzielnik_int < 0):
+        iloraz = -iloraz
+    if dzielna_int < 0:
+        reszta = -reszta
+
+    # Konwersja wyniku do U2 (uzupełnień do dwóch)
+    iloraz_u2 = wartosc_na_u2(iloraz, bity)
+    reszta_u2 = wartosc_na_u2(reszta, bity)
+
+    return iloraz_u2, reszta_u2

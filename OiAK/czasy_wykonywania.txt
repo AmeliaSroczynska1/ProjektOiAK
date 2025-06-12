@@ -1,0 +1,36 @@
+Czas dzielenia odtwarzającego (po 1 powtórzeń) = 0.0011 s
+Średni czas jednego dzielenia odtwarzającego = 1.07530004 ms
+
+Czas dzielenia nieodtwarzającego (po 1 powtórzeń) = 0.0004 s
+Średni czas jednego dzielenia nieodtwarzającego = 0.36189996 ms
+
+Czas dzielenia odtwarzającego (po 2 powtórzeń) = 0.0005 s
+Średni czas jednego dzielenia odtwarzającego = 0.24785002 ms
+
+Czas dzielenia nieodtwarzającego (po 2 powtórzeń) = 0.0007 s
+Średni czas jednego dzielenia nieodtwarzającego = 0.37349999 ms
+
+Czas dzielenia odtwarzającego (po 3 powtórzeń) = 0.0010 s
+Średni czas jednego dzielenia odtwarzającego = 0.34506669 ms
+
+Czas dzielenia nieodtwarzającego (po 3 powtórzeń) = 0.0008 s
+Średni czas jednego dzielenia nieodtwarzającego = 0.25826665 ms
+
+Czas dzielenia odtwarzającego (po 1 powtórzeń) = 0.0006 s
+Średni czas jednego dzielenia odtwarzającego = 0.62169996 ms
+
+Czas dzielenia nieodtwarzającego (po 1 powtórzeń) = 0.0004 s
+Średni czas jednego dzielenia nieodtwarzającego = 0.35540003 ms
+
+Czas dzielenia odtwarzającego (po 2 powtórzeń) = 0.0006 s
+Średni czas jednego dzielenia odtwarzającego = 0.28905005 ms
+
+Czas dzielenia nieodtwarzającego (po 2 powtórzeń) = 0.0011 s
+Średni czas jednego dzielenia nieodtwarzającego = 0.53324999 ms
+
+Czas dzielenia odtwarzającego (po 3 powtórzeń) = 0.0011 s
+Średni czas jednego dzielenia odtwarzającego = 0.35803334 ms
+
+Czas dzielenia nieodtwarzającego (po 3 powtórzeń) = 0.0009 s
+Średni czas jednego dzielenia nieodtwarzającego = 0.28596667 ms
+

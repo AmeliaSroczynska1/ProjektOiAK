@@ -11,5 +11,6 @@ ziarno = int(time.time() * 1000) & 0xFFFFFFFF
 def losuj():
     global ziarno
     ziarno = (a * ziarno + c) % modulo
-    # Liczba całkowita z przedziału 0-1000
-    return int(ziarno % 1001)
+    # Liczba całkowita ze znakiem z przedziału -1000 do 1000
+    wartosc = ziarno % 2001  # 0-2000
+    return wartosc - 1000    # -1000 do 1000
