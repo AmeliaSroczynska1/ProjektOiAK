@@ -1,9 +1,8 @@
-import generator_liczb
 import testy
 
 
 def main():
-    testy.menu()
+    testy.sredni_czas()
 
 
 if __name__ == '__main__':
