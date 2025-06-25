@@ -1,14 +1,16 @@
-def zapisz_wynik_odtwarzajace(ile_razy, czas):
+def zapisz_czas_odtwarzajace(ile_razy, czas, precyzja):
     with open("czasy_wykonywania.txt", "a", encoding="utf-8") as plik:
-        plik.write(f"Czas dzielenia odtwarzającego (po {ile_razy} powtórzeń) = {czas:.4f} s\n")
-        plik.write(f"Średni czas jednego dzielenia odtwarzającego = {czas*1000/ile_razy:.8f} ms\n\n")
+        plik.write(f"Czas dzielenia odtwarzającego (po {ile_razy} powtórzeń) = {czas*1000:.{precyzja}f} ms\n")
+        plik.write(f"Średni czas jednego dzielenia odtwarzającego = {czas*1000000/ile_razy:.{precyzja}f} micro s\n\n")
 
-def zapisz_wynik_nieodtwarzajace(ile_razy, czas):
+
+def zapisz_czas_nieodtwarzajace(ile_razy, czas, precyzja):
     with open("czasy_wykonywania.txt", "a", encoding="utf-8") as plik:
-        plik.write(f"Czas dzielenia nieodtwarzającego (po {ile_razy} powtórzeń) = {czas:.4f} s\n")
-        plik.write(f"Średni czas jednego dzielenia nieodtwarzającego = {czas*1000/ile_razy:.8f} ms\n\n")
+        plik.write(f"Czas dzielenia nieodtwarzającego (po {ile_razy} powtórzeń) = {czas*1000:.{precyzja}f} ms\n")
+        plik.write(f"Średni czas jednego dzielenia nieodtwarzającego = {czas*1000000/ile_razy:.{precyzja}f} micro s\n\n")
 
-def zapisz_dzielenie(dzielna, dzielnik, iloraz, reszta, bity=32):
+
+def zapisz_wynik(dzielna, dzielnik, iloraz, reszta, bity=32):
     with open("wyniki_dzielenia.txt", "a", encoding="utf-8") as plik:
         plik.write(
             f"Dzielna: {dzielna} | U2: {bin(dzielna & ((1 << bity) - 1))[2:].zfill(bity)}; \n"

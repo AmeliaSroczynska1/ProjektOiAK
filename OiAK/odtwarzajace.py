@@ -1,20 +1,10 @@
-def u2_na_wartosc(liczba, bity=32):
-    # Konwersja liczby z U2 na wartość ze znakiem
-    if liczba & (1 << (bity - 1)):
-        return liczba - (1 << bity)
-    else:
-        return liczba
+import konwersja
 
-def wartosc_na_u2(liczba, bity=32):
-    # Konwersja liczby całkowitej na U2
-    return liczba & ((1 << bity) - 1)
 
 def dzielenie(dzielna, dzielnik, bity=32):
     # Konwersja argumentów z U2 na wartości całkowite ze znakiem
-    dzielna_int = u2_na_wartosc(dzielna, bity)
-    dzielnik_int = u2_na_wartosc(dzielnik, bity)
-    if dzielnik_int == 0:
-        raise ZeroDivisionError("Dzielenie przez zero!")
+    dzielna_int = konwersja.u2_na_dziesietny(dzielna, bity)
+    dzielnik_int = konwersja.u2_na_dziesietny(dzielnik, bity)
 
     dzielna_abs = abs(dzielna_int)
     dzielnik_abs = abs(dzielnik_int)
@@ -55,7 +45,7 @@ def dzielenie(dzielna, dzielnik, bity=32):
         reszta = -reszta
 
     # Konwersja wyniku do U2 (uzupełnień do dwóch)
-    iloraz_u2 = wartosc_na_u2(iloraz, bity)
-    reszta_u2 = wartosc_na_u2(reszta, bity)
+    iloraz_u2 = konwersja.dziesietny_na_u2(iloraz, bity)
+    reszta_u2 = konwersja.dziesietny_na_u2(reszta, bity)
 
     return iloraz_u2, reszta_u2

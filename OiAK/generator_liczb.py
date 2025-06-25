@@ -1,3 +1,5 @@
+# Generator LCG (Linear Congruential Generator)
+
 import time
 
 # Parametry LCG
@@ -7,6 +9,7 @@ c = 1013904223
 
 # Inicjalizacja ziarna na podstawie czasu systemowego
 ziarno = int(time.time() * 1000) & 0xFFFFFFFF
+
 
 def losuj():
     global ziarno
