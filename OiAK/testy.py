@@ -92,7 +92,7 @@ def menu():
 
         while True:
             try:
-                dzielnik = int(input("Podaj dzielnik (może być ujemny, ale nie zero): "))
+                dzielnik = int(input("Podaj dzielnik (może być ujemny): "))
                 # if dzielnik == 0:
                 #     print("Nie można dzielić przez 0")
                 #     continue
