@@ -19,7 +19,7 @@ def generuj_pary(ile, bity=32):
 
 
 def sredni_czas():
-    powtorzenia = [500000]  # Przykładowe wartości do testów
+    powtorzenia = [500, 1000, 2000, 4000, 10000, 20000, 50000, 100000, 500000, 1000000]  # Przykładowe wartości do testów
     bity = 32
 
     for ile_razy in powtorzenia:

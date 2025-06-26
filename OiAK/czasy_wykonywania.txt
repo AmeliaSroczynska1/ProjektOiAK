@@ -1,60 +1,3 @@
-Czas dzielenia odtwarzającego (po 500 powtórzeń) = 0.1445 s
-Średni czas jednego dzielenia odtwarzającego = 0.2889 ms
-
-Czas dzielenia nieodtwarzającego (po 500 powtórzeń) = 0.1301 s
-Średni czas jednego dzielenia nieodtwarzającego = 0.2602 ms
-
-Czas dzielenia odtwarzającego (po 1000 powtórzeń) = 0.2619 s
-Średni czas jednego dzielenia odtwarzającego = 0.2619 ms
-
-Czas dzielenia nieodtwarzającego (po 1000 powtórzeń) = 0.2688 s
-Średni czas jednego dzielenia nieodtwarzającego = 0.2688 ms
-
-Czas dzielenia odtwarzającego (po 2000 powtórzeń) = 0.5640 s
-Średni czas jednego dzielenia odtwarzającego = 0.2820 ms
-
-Czas dzielenia nieodtwarzającego (po 2000 powtórzeń) = 0.6486 s
-Średni czas jednego dzielenia nieodtwarzającego = 0.3243 ms
-
-Czas dzielenia odtwarzającego (po 4000 powtórzeń) = 1.1339 s
-Średni czas jednego dzielenia odtwarzającego = 0.2835 ms
-
-Czas dzielenia nieodtwarzającego (po 4000 powtórzeń) = 1.2121 s
-Średni czas jednego dzielenia nieodtwarzającego = 0.3030 ms
-
-Czas dzielenia odtwarzającego (po 10000 powtórzeń) = 2.8534 s
-Średni czas jednego dzielenia odtwarzającego = 0.2853 ms
-
-Czas dzielenia nieodtwarzającego (po 10000 powtórzeń) = 2.7867 s
-Średni czas jednego dzielenia nieodtwarzającego = 0.2787 ms
-
-Czas dzielenia odtwarzającego (po 20000 powtórzeń) = 6.5813 s
-Średni czas jednego dzielenia odtwarzającego = 0.3291 ms
-
-Czas dzielenia nieodtwarzającego (po 20000 powtórzeń) = 6.1204 s
-Średni czas jednego dzielenia nieodtwarzającego = 0.3060 ms
-
-Czas dzielenia odtwarzającego (po 50000 powtórzeń) = 18.3158 s
-Średni czas jednego dzielenia odtwarzającego = 0.3663 ms
-
-Czas dzielenia nieodtwarzającego (po 50000 powtórzeń) = 17.3708 s
-Średni czas jednego dzielenia nieodtwarzającego = 0.3474 ms
-
-Czas dzielenia odtwarzającego (po 100000 powtórzeń) = 32.2342 s
-Średni czas jednego dzielenia odtwarzającego = 0.3223 ms
-
-Czas dzielenia nieodtwarzającego (po 100000 powtórzeń) = 30.6255 s
-Średni czas jednego dzielenia nieodtwarzającego = 0.3063 ms
-
-Czas dzielenia odtwarzającego (po 1000000 powtórzeń) = 367.0924 s
-Średni czas jednego dzielenia odtwarzającego = 0.3671 ms
-
-Czas dzielenia nieodtwarzającego (po 1000000 powtórzeń) = 354.1429 s
-Średni czas jednego dzielenia nieodtwarzającego = 0.3541 ms
-
-
-
-
 Czas dzielenia odtwarzającego (po 500 powtórzeń) = 1.1527 ms
 Średni czas jednego dzielenia odtwarzającego = 2.3054 micro s
 
@@ -103,15 +46,18 @@ Czas dzielenia odtwarzającego (po 100000 powtórzeń) = 197.0822 ms
 Czas dzielenia nieodtwarzającego (po 100000 powtórzeń) = 194.4311 ms
 Średni czas jednego dzielenia nieodtwarzającego = 1.9443 micro s
 
+Czas dzielenia odtwarzającego (po 500000 powtórzeń) = 837.4037 ms
+Średni czas jednego dzielenia odtwarzającego = 1.6748 micro s
+
+Czas dzielenia nieodtwarzającego (po 500000 powtórzeń) = 954.5574 ms
+Średni czas jednego dzielenia nieodtwarzającego = 1.9091 micro s
+
 Czas dzielenia odtwarzającego (po 1000000 powtórzeń) = 1977.1564 ms
 Średni czas jednego dzielenia odtwarzającego = 1.9772 micro s
 
 Czas dzielenia nieodtwarzającego (po 1000000 powtórzeń) = 2220.6708 ms
 Średni czas jednego dzielenia nieodtwarzającego = 2.2207 micro s
 
-Czas dzielenia odtwarzającego (po 500000 powtórzeń) = 837.4037 ms
-Średni czas jednego dzielenia odtwarzającego = 1.6748 micro s
 
-Czas dzielenia nieodtwarzającego (po 500000 powtórzeń) = 954.5574 ms
-Średni czas jednego dzielenia nieodtwarzającego = 1.9091 micro s
+
 
