@@ -14,7 +14,7 @@ def dzielenie(dzielna, dzielnik, bity=32):
 
     for i in range(bity_dzielnej - 1, -1, -1):
         # 1. Przesunięcie reszty w lewo i dołączenie kolejnego bitu dzielnej:
-        #    Reszta zostaje przesunięta o jeden bit w lewo, a do najmłodszego bitu dołączany jest kolejny bit z dzielnej.
+        #    Reszta zostaje przesunięta o jeden bit w lewo, a do najmłodszego bitu dołączany jest kolejny bit z dzielnej
         reszta = (reszta << 1) | ((dzielna_abs >> i) & 1)
 
         # 2. Warunkowe wykonanie operacji arytmetycznej:

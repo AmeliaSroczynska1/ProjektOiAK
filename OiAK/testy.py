@@ -19,23 +19,17 @@ def generuj_pary(ile, bity=32):
 
 
 def sredni_czas():
-    powtorzenia = [500, 1000, 2000, 4000, 10000, 20000, 50000, 100000, 500000, 1000000]  # Przykładowe wartości do testów
+    powtorzenia = [500, 1000, 2000, 4000, 10000, 20000, 50000, 100000, 500000, 1000000] # Przykładowe wartości do testów
     bity = 32
 
     for ile_razy in powtorzenia:
         dzielne, dzielniki = generuj_pary(ile_razy, bity)
 
-        # print("\nPary liczb (dziesiętnie | system U2):")
-        # for i in range(ile_razy):
-        #     print(f"Para {i+1}:")
-        #     print(f"Dzielna: {konwersja.u2_na_dziesietny(dzielne[i], bity)} | {bin(dzielne[i])[2:].zfill(bity)}")
-        #     print(f"Dzielnik: {konwersja.u2_na_dziesietny(dzielniki[i], bity)} | {bin(dzielniki[i])[2:].zfill(bity)}\n")
-
         # Dla metody odtwarzającej
         start = time.perf_counter()
         for i in range(ile_razy):
             iloraz_u2, reszta_u2 = odtwarzajace.dzielenie(dzielne[i], dzielniki[i], bity)
-            #Zapis każdej operacji dzielenia do pliku
+            #Zapis każdej operacji dzielenia do pliku               # Komentarz, żeby aktualnie nie zapisywać wyników
             # obsluga_plikow.zapisz_wynik(
             #     konwersja.u2_na_dziesietny(dzielne[i], bity),
             #     konwersja.u2_na_dziesietny(dzielniki[i], bity),
@@ -47,16 +41,13 @@ def sredni_czas():
 
         czas_odtwarzajace = koniec - start
 
-        # print(f"Czas dzielenia odtwarzającego (po {ile_razy} powtórzeń) = {czas_odtwarzajace:.4f} s")
-        # print(f"Średni czas jednego dzielenia odtwarzającego = {czas_odtwarzajace*1000/ile_razy:.8f} ms\n")
-
         obsluga_plikow.zapisz_czas_odtwarzajace(ile_razy, czas_odtwarzajace, 4)
 
         # Dla metody nieodtwarzającej
         start = time.perf_counter()
         for i in range(ile_razy):
             iloraz_u2, reszta_u2 = nieodtwarzajace.dzielenie(dzielne[i], dzielniki[i], bity)
-            # obsluga_plikow.zapisz_wynik(
+            # obsluga_plikow.zapisz_wynik(                         # Komentarz, żeby aktualnie nie zapisywać wyników
             #     konwersja.u2_na_dziesietny(dzielne[i], bity),
             #     konwersja.u2_na_dziesietny(dzielniki[i], bity),
             #     konwersja.u2_na_dziesietny(iloraz_u2, bity),
@@ -67,11 +58,7 @@ def sredni_czas():
 
         czas_nieodtwarzajace = koniec - start
 
-        # print(f"Czas dzielenia nieodtwarzającego (po {ile_razy} powtórzeń) = {czas_nieodtwarzajace:.4f} s")
-        # print(f"Średni czas jednego dzielenia nieodtwarzającego = {czas_nieodtwarzajace*1000/ile_razy:.8f} ms\n")
-
         obsluga_plikow.zapisz_czas_nieodtwarzajace(ile_razy, czas_nieodtwarzajace, 4)
-
 
 
 def menu():
@@ -93,9 +80,9 @@ def menu():
         while True:
             try:
                 dzielnik = int(input("Podaj dzielnik (może być ujemny): "))
-                # if dzielnik == 0:
-                #     print("Nie można dzielić przez 0")
-                #     continue
+                if dzielnik == 0:
+                    print("Nie można dzielić przez 0")
+                    continue
                 break
             except ValueError:
                 print("Błąd: Wprowadź liczbę całkowitą")
@@ -189,7 +176,6 @@ def menu():
             obsluga_plikow.zapisz_czas_odtwarzajace(wybor3, koniec - start, precyzja)
         elif wybor1 == '2':
             obsluga_plikow.zapisz_czas_nieodtwarzajace(wybor3, koniec - start, precyzja)
-
 
     # Wyświetlenie wyniku ostatniego dzielenia
     print("\nWynik dzielenia:")

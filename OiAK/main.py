@@ -1,5 +1,4 @@
 import testy
-import wykres
 
 
 def main():
